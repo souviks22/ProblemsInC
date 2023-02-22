@@ -52,12 +52,13 @@ void sort(Array *a)
 int main()
 {
     Array *arr = generateArray();
+    printf("\n");
     for (int i = 0; i < arr->len; i++)
     {
         printf("%d ", arr->seq[i]);
     }
     sort(arr);
-    printf("\n");
+    printf("\n\n");
     for (int i = 0; i < arr->len; i++)
     {
         printf("%d ", arr->seq[i]);
