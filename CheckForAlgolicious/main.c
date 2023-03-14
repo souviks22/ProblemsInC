@@ -82,6 +82,7 @@ int method3(int *A, int n)
         if (A[i] > lastMaxNum)
         {
             lastMaxNum = A[i];
+            lastLessNum = A[i];
         }
         else
         {
@@ -90,10 +91,6 @@ int method3(int *A, int n)
                 return 0;
             }
             lastLessNum = A[i];
-            while (i < n - 1 && A[i + 1] > lastMaxNum)
-            {
-                i++;
-            }
         }
     }
     return 1;
@@ -111,8 +108,8 @@ int main(int argc, char *argv[])
         scanf(" %d", &A[i]);
     }
     printf("\n");
-    printf("    Method 0: %s\n", method0(A, n) ? "Valid" : "Invalid");
-    printf("    Method 1: %s\n", method1(A, n) ? "Valid" : "Invalid");
+    // printf("    Method 0: %s\n", method0(A, n) ? "Valid" : "Invalid");
+    // printf("    Method 1: %s\n", method1(A, n) ? "Valid" : "Invalid");
     printf("    Method 2: %s\n", method2(A, n) ? "Valid" : "Invalid");
     printf("    Method 3: %s\n", method3(A, n) ? "Valid" : "Invalid");
 
