@@ -68,11 +68,11 @@ int greatestCoins(int amount, int i, int *coins, int *counts, int **dp)
 {
     if (amount < 0 || i < 0 || counts[i] < 0)
     {
-        return 0;
+        return -1e9;
     }
     if (!amount)
     {
-        return 1;
+        return 0;
     }
     if (dp[i][amount] != -1)
     {
